@@ -23,6 +23,8 @@ class QuestionViewController: UIViewController {
     @IBAction func answerButtonAHandler(_ sender: Any) {
         print("Redbull Vodka")
         
+        answerButtonA.backgroundColor = .red
+        
         let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
