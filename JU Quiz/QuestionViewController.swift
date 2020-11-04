@@ -22,52 +22,54 @@ class QuestionViewController: UIViewController {
     
     @IBAction func answerButtonAHandler(_ sender: Any) {
         print("Redbull Vodka")
-        
-        answerButtonA.backgroundColor = .red
-        
-        let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
-        
-        present(alertController, animated: true, completion: nil)
+        showWrongAnswerAlert(button: answerButtonA)
     }
     
     
     @IBAction func answerButtonBHandler(_ sender: Any) {
         print("Rom & Cola")
-        
-        answerButtonB.backgroundColor = .red
-        
-        let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
-        
-        present(alertController, animated: true, completion: nil)
+        showWrongAnswerAlert(button: answerButtonB)
     }
     
     @IBAction func answerButtonCHandler(_ sender: Any) {
         print("Mojito")
-        
-        answerButtonC.backgroundColor = .red
-        
-        let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
-        
-        present(alertController, animated: true, completion: nil)
+        showWrongAnswerAlert(button: answerButtonC)
     }
     
     @IBAction func answerButtonDHandler(_ sender: Any) {
         print("Pina Colada")
-        
+        showRightAnswerAlert(button: answerButtonD)
+    }
+    
+    
+    private func showRightAnswerAlert(button: UIButton){
         answerButtonD.backgroundColor = .green
         
         let alertController = UIAlertController(title: "Correct Answer", message: "You have answered correct!", preferredStyle: UIAlertController.Style.alert)
         
-        alertController.addAction(UIAlertAction(title: "Yeee boiii", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
+        alertController.addAction(UIAlertAction(title: "Yeee boiii", style: UIAlertAction.Style.default, handler: { (_) in
+                                                    //alertController.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+            
+        }))
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    
+    private func showWrongAnswerAlert(button: UIButton){
+        button.backgroundColor = .red
+        answerButtonD.backgroundColor = .green
+        let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in
+            self.navigationController?.popViewController(animated: true)
+                                                    //alertController.dismiss(animated: true, completion: nil)
+            
+        }))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
     
     /*
     // MARK: - Navigation
