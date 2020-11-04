@@ -36,6 +36,8 @@ class QuestionViewController: UIViewController {
     @IBAction func answerButtonBHandler(_ sender: Any) {
         print("Rom & Cola")
         
+        answerButtonB.backgroundColor = .red
+        
         let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
@@ -46,6 +48,8 @@ class QuestionViewController: UIViewController {
     @IBAction func answerButtonCHandler(_ sender: Any) {
         print("Mojito")
         
+        answerButtonC.backgroundColor = .red
+        
         let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in alertController.dismiss(animated: true, completion: nil)}))
@@ -55,6 +59,8 @@ class QuestionViewController: UIViewController {
     
     @IBAction func answerButtonDHandler(_ sender: Any) {
         print("Pina Colada")
+        
+        answerButtonD.backgroundColor = .green
         
         let alertController = UIAlertController(title: "Correct Answer", message: "You have answered correct!", preferredStyle: UIAlertController.Style.alert)
         
