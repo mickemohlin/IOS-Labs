@@ -9,6 +9,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerButtonA: UIButton!
     @IBOutlet weak var answerButtonB: UIButton!
     @IBOutlet weak var answerButtonC: UIButton!
@@ -16,8 +17,10 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        answerButtonA.layer.cornerRadius = 20
+        answerButtonB.layer.cornerRadius = 20
+        answerButtonC.layer.cornerRadius = 20
+        answerButtonD.layer.cornerRadius = 20
     }
     
     @IBAction func answerButtonAHandler(_ sender: Any) {
@@ -48,9 +51,9 @@ class QuestionViewController: UIViewController {
         let alertController = UIAlertController(title: "Correct Answer", message: "You have answered correct!", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "Yeee boiii", style: UIAlertAction.Style.default, handler: { (_) in
-                                                    //alertController.dismiss(animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
-            
+            self.performSegue(withIdentifier: "ResultView", sender: nil)
+            //alertController.dismiss(animated: true, completion: nil)
+            //self.navigationController?.popViewController(animated: true)
         }))
         
         present(alertController, animated: true, completion: nil)
@@ -62,9 +65,9 @@ class QuestionViewController: UIViewController {
         answerButtonD.backgroundColor = .green
         let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in
-            self.navigationController?.popViewController(animated: true)
-                                                    //alertController.dismiss(animated: true, completion: nil)
-            
+            self.performSegue(withIdentifier: "ResultView", sender: nil)
+            //self.navigationController?.popViewController(animated: true)
+            //alertController.dismiss(animated: true, completion: nil)
         }))
         present(alertController, animated: true, completion: nil)
     }
