@@ -15,6 +15,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerButtonC: UIButton!
     @IBOutlet weak var answerButtonD: UIButton!
     
+    private var haveWon = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         answerButtonA.layer.cornerRadius = 20
@@ -46,6 +48,7 @@ class QuestionViewController: UIViewController {
     
     
     private func showRightAnswerAlert(button: UIButton){
+        haveWon = true
         answerButtonD.backgroundColor = .green
         
         let alertController = UIAlertController(title: "Correct Answer", message: "You have answered correct!", preferredStyle: UIAlertController.Style.alert)
@@ -61,6 +64,7 @@ class QuestionViewController: UIViewController {
     
     
     private func showWrongAnswerAlert(button: UIButton){
+        haveWon = false
         button.backgroundColor = .red
         answerButtonD.backgroundColor = .green
         let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
@@ -72,16 +76,14 @@ class QuestionViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultViewController = segue.destination as? ResultViewController {
+            resultViewController.resultView.resultLabel.text = haveWon ? "You won" :  "You lost"
+        }
+    }
     
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
     */
-
 }

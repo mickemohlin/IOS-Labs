@@ -35,6 +35,25 @@ class ResultView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        resultLabel.font = UIFont.preferredFont(forTextStyle: .callout)
+        resultLabel.adjustsFontForContentSizeCategory = true
+        resultLabel.textColor = .white
+        addSubview(resultLabel)
+        
+        resultLabel.translatesAutoresizingMaskIntoConstraints = false
+        resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        
+        let backToStartButton = UIButton()
+        backToStartButton.setTitleColor(.white, for: .normal)
+        backToStartButton.setTitle(NSLocalizedString("Back to start", comment: "Back to start menu"), for: .normal)
+        addSubview(backToStartButton)
+        
+        backToStartButton.translatesAutoresizingMaskIntoConstraints = false
+        backToStartButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
+        backToStartButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        //TODO: Add action to backToStartButton
     }
 }
 

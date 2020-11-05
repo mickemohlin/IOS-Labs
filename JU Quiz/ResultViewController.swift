@@ -9,7 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    private let resultView = ResultView()
+    let resultView = ResultView()
     
     override func loadView() {
         view = resultView
