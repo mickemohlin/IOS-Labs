@@ -16,47 +16,80 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerButtonD: UIButton!
     
     private var haveWon = false
+    var question: Question?
+    var questions: [Question] = [] {
+        didSet {
+            question = questions.removeFirst()
+        }
+    }
+    
+    var numberOfQuestions = 0
+    var numberOfRightAnswers = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerButtonA.layer.cornerRadius = 20
-        answerButtonB.layer.cornerRadius = 20
-        answerButtonC.layer.cornerRadius = 20
-        answerButtonD.layer.cornerRadius = 20
+        
+        questionLabel.clipsToBounds = true
+        questionLabel.layer.cornerRadius = 20
+        
+        var buttons = [answerButtonA, answerButtonB, answerButtonC, answerButtonD]
+        buttons.forEach { (button) in
+            button?.layer.cornerRadius = 20
+        }
+        
+        questionLabel.text = question?.question
+        buttons.shuffle()
+        let correctButton = buttons.removeFirst()
+        correctButton?.setTitle(question?.correctAnswer, for: .normal)
+        
+        question?.incorrectAnswers.forEach( { (answer) in
+            let button = buttons.removeFirst()
+            button?.setTitle(answer, for: .normal)
+        })
     }
     
     @IBAction func answerButtonAHandler(_ sender: Any) {
-        print("Redbull Vodka")
-        showWrongAnswerAlert(button: answerButtonA)
+        if answerButtonA.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: answerButtonA)
+        } else {
+            showWrongAnswerAlert(button: answerButtonA)
+        }
     }
     
     
     @IBAction func answerButtonBHandler(_ sender: Any) {
-        print("Rom & Cola")
-        showWrongAnswerAlert(button: answerButtonB)
+        if answerButtonB.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: answerButtonB)
+        } else {
+            showWrongAnswerAlert(button: answerButtonB)
+        }
     }
     
     @IBAction func answerButtonCHandler(_ sender: Any) {
-        print("Mojito")
-        showWrongAnswerAlert(button: answerButtonC)
+        if answerButtonC.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: answerButtonC)
+        } else {
+            showWrongAnswerAlert(button: answerButtonC)
+        }
     }
     
     @IBAction func answerButtonDHandler(_ sender: Any) {
-        print("Pina Colada")
-        showRightAnswerAlert(button: answerButtonD)
+        if answerButtonD.title(for: .normal) == question?.correctAnswer {
+            showRightAnswerAlert(button: answerButtonD)
+        } else {
+            showWrongAnswerAlert(button: answerButtonD)
+        }
     }
     
     
     private func showRightAnswerAlert(button: UIButton){
-        haveWon = true
-        answerButtonD.backgroundColor = .green
+        numberOfRightAnswers += 1
+        button.backgroundColor = .green
         
-        let alertController = UIAlertController(title: "Correct Answer", message: "You have answered correct!", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Correct Answer", message: "Good job!", preferredStyle: UIAlertController.Style.alert)
         
-        alertController.addAction(UIAlertAction(title: "Yeee boiii", style: UIAlertAction.Style.default, handler: { (_) in
-            self.performSegue(withIdentifier: "ResultView", sender: nil)
-            //alertController.dismiss(animated: true, completion: nil)
-            //self.navigationController?.popViewController(animated: true)
+        alertController.addAction(UIAlertAction(title: "Yeee boiii", style: UIAlertAction.Style.default, handler: { [weak self] (_) in
+            self?.goToNextScreen()
         }))
         
         present(alertController, animated: true, completion: nil)
@@ -64,21 +97,32 @@ class QuestionViewController: UIViewController {
     
     
     private func showWrongAnswerAlert(button: UIButton){
-        haveWon = false
         button.backgroundColor = .red
-        answerButtonD.backgroundColor = .green
-        let alertController = UIAlertController(title: "Wrong Answer", message: "Try another answer", preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (_) in
-            self.performSegue(withIdentifier: "ResultView", sender: nil)
-            //self.navigationController?.popViewController(animated: true)
-            //alertController.dismiss(animated: true, completion: nil)
+        
+        let alertController = UIAlertController(title: "Wrong Answer", message: "Better luck next time.", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { [weak self] (_) in
+            self?.goToNextScreen()
         }))
+        
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func goToNextScreen(){
+        guard !questions.isEmpty,
+            let questionViewController = storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController else {
+                performSegue(withIdentifier: "ResultView", sender: nil)
+                return
+            }
+        
+        questionViewController.numberOfQuestions = numberOfQuestions
+        questionViewController.numberOfRightAnswers = numberOfRightAnswers
+        questionViewController.questions = questions
+        navigationController?.pushViewController(questionViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
-            resultViewController.resultView.resultLabel.text = haveWon ? "You won" :  "You lost"
+            resultViewController.resultView.resultLabel.text = "Out of \(numberOfQuestions) questions you have \(numberOfRightAnswers) right answers."
         }
     }
     

@@ -19,6 +19,7 @@
 		9E34CF412553E59A00834DB6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34CF402553E59A00834DB6 /* ResultViewController.swift */; };
 		9E34CF462553E69400834DB6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34CF452553E69400834DB6 /* ResultView.swift */; };
 		9E34CF4B2553EA9200834DB6 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */; };
+		9E4FC7E3255D1C2A007B7475 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FC7E2255D1C2A007B7475 /* Question.swift */; };
 		9E6363B8254AC4B500FEDB43 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		9E34CF402553E59A00834DB6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		9E34CF452553E69400834DB6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		9E4FC7E2255D1C2A007B7475 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				9E34CF402553E59A00834DB6 /* ResultViewController.swift */,
 				9E34CF452553E69400834DB6 /* ResultView.swift */,
 				9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */,
+				9E4FC7E2255D1C2A007B7475 /* Question.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				9E2A8528254A010700FA96F8 /* ViewController.swift in Sources */,
 				9E6363B8254AC4B500FEDB43 /* QuestionViewController.swift in Sources */,
 				9E2A8524254A010700FA96F8 /* AppDelegate.swift in Sources */,
+				9E4FC7E3255D1C2A007B7475 /* Question.swift in Sources */,
 				9E2A8526254A010700FA96F8 /* SceneDelegate.swift in Sources */,
 				9E2A852E254A010700FA96F8 /* JU_Quiz.xcdatamodeld in Sources */,
 				9E34CF462553E69400834DB6 /* ResultView.swift in Sources */,

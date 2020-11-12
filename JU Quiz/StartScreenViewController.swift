@@ -23,11 +23,21 @@ class StartScreenViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation */
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let questionViewController = segue.destination as? QuestionViewController {
+            let question1 = Question(category: "Drinks", type: .multiple, difficulty: .easy, question: "What is my favorite drink?", correctAnswer: "Redbull Vodka", incorrectAnswers: ["Water", "Milk", "Coca Cola"])
+            
+            let question2 = Question(category: "Food", type: .multiple, difficulty: .hard, question: "What is my favorite dish?", correctAnswer: "Hamburger", incorrectAnswers: ["Pasta Carbonara", "Pizza", "Steak"])
+            
+            let question3 = Question(category: "Hockey", type: .multiple, difficulty: .medium, question: "Which team won Stanley Cup 2020?", correctAnswer: "Tampa Bay Lightning", incorrectAnswers: ["New York Rangers", "Minnesota Wild", "Vegas Golden Knights"])
+            
+            let questions = [question1, question2, question3]
+            questionViewController.numberOfQuestions = questions.count
+            questionViewController.questions = questions
+        }
     }
-    */
+    
 
 }

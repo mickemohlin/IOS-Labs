@@ -18,7 +18,11 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultView.backToStartButton.addTarget(self, action: #selector(backButtonHandler), for: .touchUpInside)
+    }
+    
+    @objc private func backButtonHandler() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
 

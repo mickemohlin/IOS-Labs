@@ -137,7 +137,7 @@ learning even more in the future.
         <!--Question View Controller-->
         <scene sceneID="gV7-PN-Qd6">
             <objects>
-                <viewController id="rPg-zh-5Hs" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionViewController" id="rPg-zh-5Hs" customClass="QuestionViewController" customModule="JU_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAr-7y-OaE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
