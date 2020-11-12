@@ -123,7 +123,7 @@ class QuestionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
-            resultViewController.resultView.resultLabel.text = "Out of \(numberOfQuestions) questions you have \(numberOfRightAnswers) right answers."
+            resultViewController.resultView.resultLabel.text = "Out of \(numberOfQuestions) questions you had \(numberOfRightAnswers) right answers."
             resultViewController.resultView.difficultyLabel.text = "Difficulty: "
         }
     }
