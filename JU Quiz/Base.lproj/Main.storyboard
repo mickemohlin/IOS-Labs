@@ -85,7 +85,7 @@ learning even more in the future.
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JU Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-wC-eXb">
-                                <rect key="frame" x="117.5" y="378" width="179.5" height="60"/>
+                                <rect key="frame" x="117.5" y="88" width="179.5" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@ learning even more in the future.
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rPg-zh-5Hs" kind="show" id="zxF-QL-A9G"/>
+                                    <segue destination="rPg-zh-5Hs" kind="show" id="4Lw-yI-rcy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-Dx-lbG">
@@ -112,15 +112,53 @@ learning even more in the future.
                                     <segue destination="SHg-UY-Jf5" kind="show" id="oJ2-V2-1wb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-Qz-kOb">
+                                <rect key="frame" x="122" y="203" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ6-n2-o7e">
+                                <rect key="frame" x="106" y="250" width="42" height="36"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sv-RZ-Eem">
+                                <rect key="frame" x="265.5" y="250" width="43" height="36"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nb-SU-ubX">
+                                <rect key="frame" x="171.5" y="250" width="71" height="36"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odx-Un-lDI"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
+                            <constraint firstItem="ZQ6-n2-o7e" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="Avf-va-xhS"/>
+                            <constraint firstItem="5Nb-SU-ubX" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="CRo-R8-9Zc"/>
                             <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="O1l-XY-GaB"/>
+                            <constraint firstItem="slT-Qz-kOb" firstAttribute="centerY" secondItem="H3o-wC-eXb" secondAttribute="centerY" constant="100" id="RG4-bo-7d9"/>
                             <constraint firstItem="H3o-wC-eXb" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="Rit-lv-Kh4"/>
                             <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="UQV-l9-jLR"/>
-                            <constraint firstItem="H3o-wC-eXb" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="-40" id="dZ3-36-rTa"/>
+                            <constraint firstItem="5Nb-SU-ubX" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="VIi-4n-W65"/>
+                            <constraint firstItem="slT-Qz-kOb" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="a8Q-To-GBZ"/>
+                            <constraint firstItem="4Sv-RZ-Eem" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="bcE-As-WYO"/>
+                            <constraint firstItem="H3o-wC-eXb" firstAttribute="centerY" secondItem="odx-Un-lDI" secondAttribute="top" constant="30" id="dZ3-36-rTa"/>
+                            <constraint firstItem="ZQ6-n2-o7e" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="-80" id="h7d-Ne-fSN"/>
                             <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="10" id="om5-lF-Zd2"/>
+                            <constraint firstItem="4Sv-RZ-Eem" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="80" id="ptd-UC-FIr"/>
                             <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="50" id="y9o-9b-q82"/>
                         </constraints>
                     </view>
@@ -236,7 +274,7 @@ learning even more in the future.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgi-aN-jt6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501" y="125"/>
+            <point key="canvasLocation" x="1445" y="125"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="ZGi-uK-jN6">
@@ -252,18 +290,27 @@ learning even more in the future.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wg-l4-O9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428.985507246377" y="124.55357142857142"/>
+            <point key="canvasLocation" x="2330" y="125"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -25,6 +25,7 @@ class QuestionViewController: UIViewController {
     
     var numberOfQuestions = 0
     var numberOfRightAnswers = 0
+    //var gameDifficulty: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +124,7 @@ class QuestionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController = segue.destination as? ResultViewController {
             resultViewController.resultView.resultLabel.text = "Out of \(numberOfQuestions) questions you have \(numberOfRightAnswers) right answers."
+            resultViewController.resultView.difficultyLabel.text = "Difficulty: "
         }
     }
     

@@ -11,6 +11,8 @@ class ResultView: UIView {
     
     private let titleLabel = UILabel()
     let resultLabel = UILabel()
+    let difficultyLabel = UILabel()
+    let categoryLabel = UILabel()
     let backToStartButton = UIButton()
     
     override init(frame: CGRect) {
@@ -45,6 +47,15 @@ class ResultView: UIView {
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
         resultLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         resultLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor).isActive = true
+        
+        difficultyLabel.font = UIFont.preferredFont(forTextStyle: .callout)
+        difficultyLabel.adjustsFontForContentSizeCategory = true
+        difficultyLabel.textColor = .white
+        addSubview(difficultyLabel)
+        
+        difficultyLabel.translatesAutoresizingMaskIntoConstraints = false
+        difficultyLabel.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 20).isActive = true
+        difficultyLabel.centerXAnchor.constraint(equalTo: resultLabel.centerXAnchor).isActive = true
         
         backToStartButton.setTitleColor(.white, for: .normal)
         backToStartButton.setTitle(NSLocalizedString("Back to start", comment: "Back to start menu"), for: .normal)
