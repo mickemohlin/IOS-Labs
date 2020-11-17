@@ -21,7 +21,7 @@ class StartScreenViewController: UIViewController {
     
     
     var chosenDifficulty: String = "easy" //Default value
-    var chosenNumberOfRounds: Int = 4 //Default value
+    var chosenNumberOfRounds: Int = 3 //Default value
     
 
     override func viewDidLoad() {
@@ -75,7 +75,7 @@ class StartScreenViewController: UIViewController {
             fourButton.backgroundColor = .systemTeal
             sixButton.backgroundColor = .systemTeal
             
-            chosenNumberOfRounds = 2
+            chosenNumberOfRounds = 1
         }
         
         else if sender.tag == 2 {
@@ -83,7 +83,7 @@ class StartScreenViewController: UIViewController {
             fourButton.backgroundColor = .purple
             sixButton.backgroundColor = .systemTeal
             
-            chosenNumberOfRounds = 4
+            chosenNumberOfRounds = 2
         }
         
         else if sender.tag == 3 {
@@ -91,7 +91,7 @@ class StartScreenViewController: UIViewController {
             fourButton.backgroundColor = .systemTeal
             sixButton.backgroundColor = .purple
             
-            chosenNumberOfRounds = 6
+            chosenNumberOfRounds = 3
 
         }
     }
@@ -101,22 +101,41 @@ class StartScreenViewController: UIViewController {
         if let questionViewController = segue.destination as? QuestionViewController {
             let question1 = Question(category: "Food", type: .multiple, difficulty: .easy, question: "What is my favorite drink?", correctAnswer: "Redbull Vodka", incorrectAnswers: ["Water", "Milk", "Coca Cola"])
             
-            let question2 = Question(category: "Food", type: .multiple, difficulty: .hard, question: "What is my favorite dish?", correctAnswer: "Hamburger", incorrectAnswers: ["Pasta Carbonara", "Pizza", "Steak"])
+            let question2 = Question(category: "Food", type: .multiple, difficulty: .easy, question: "What is my favorite dish?", correctAnswer: "Hamburger", incorrectAnswers: ["Pasta Carbonara", "Pizza", "Steak"])
             
-            let question3 = Question(category: "Hockey", type: .multiple, difficulty: .medium, question: "Which team won the Stanley Cup 2020?", correctAnswer: "Tampa Bay Lightning", incorrectAnswers: ["New York Rangers", "Minnesota Wild", "Vegas Golden Knights"])
+            let question3 = Question(category: "Hockey", type: .multiple, difficulty: .easy, question: "Which team won the Stanley Cup 2020?", correctAnswer: "Tampa Bay Lightning", incorrectAnswers: ["New York Rangers", "Minnesota Wild", "Vegas Golden Knights"])
             
             let question4 = Question(category: "Food", type: .multiple, difficulty: .medium, question: "What is the best burger place?", correctAnswer: "Jureskogs", incorrectAnswers: ["McDonalds", "Burger King", "Max"])
             
-            let question5 = Question(category: "Hockey", type: .multiple, difficulty: .easy, question: "What year did Sweden win the olympics?", correctAnswer: "2006", incorrectAnswers: ["2002", "2010", "2014"])
+            let question5 = Question(category: "Hockey", type: .multiple, difficulty: .medium, question: "What year did Sweden win the olympics?", correctAnswer: "2006", incorrectAnswers: ["2002", "2010", "2014"])
             
-            let question6 = Question(category: "Hockey", type: .multiple, difficulty: .hard, question: "How many points did Nikita Kucherov get in the regular season: 2018-2019?", correctAnswer: "127 points", incorrectAnswers: ["110 points", "95 points", "133 points"])
+            let question6 = Question(category: "Hockey", type: .multiple, difficulty: .medium, question: "How many points did Nikita Kucherov get in the regular season: 2018-2019?", correctAnswer: "127 points", incorrectAnswers: ["110 points", "95 points", "133 points"])
             
-            let questions = [question1, question2, question3, question4, question5, question6]
+            let question7 = Question(category: "Hockey", type: .multiple, difficulty: .hard, question: "How many points does Wayne Gretzky have in toal?", correctAnswer: "2857", incorrectAnswers: ["2410", "2611", "2021"])
             
-            //selectedQuestions = collectSelectedQuestions()
+            let question8 = Question(category: "Food", type: .multiple, difficulty: .hard, question: "What is my favorite snack?", correctAnswer: "Nachos", incorrectAnswers: ["Candy", "Cookies", "Fruit"])
             
-            questionViewController.numberOfQuestions = questions.count
-            questionViewController.questions = questions
+            let question9 = Question(category: "Hockey", type: .multiple, difficulty: .hard, question: "Which is the best hockey team in the world?", correctAnswer: "Linköpings Hockey Club", incorrectAnswers: ["Chicago Blackhawks", "HV71", "New York Rangers"])
+            
+            
+            let questions = [question1, question2, question3, question4, question5, question6, question7, question8, question9]
+            var selectedQuestions = [Question]()
+            
+            var countQuestions = 0
+            
+            for eachQuestion in questions {
+                if countQuestions == chosenNumberOfRounds {
+                    break
+                }
+                
+                if eachQuestion.difficulty.rawValue == chosenDifficulty {
+                    selectedQuestions.append(eachQuestion)
+                    countQuestions += 1
+                }
+            }
+            
+            questionViewController.numberOfQuestions = selectedQuestions.count
+            questionViewController.questions = selectedQuestions
         }
     }
     

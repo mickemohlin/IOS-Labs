@@ -156,7 +156,7 @@ learning even more in the future.
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-S7-hL5">
                                 <rect key="frame" x="112" y="401" width="30" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="2">
+                                <state key="normal" title="1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -166,7 +166,7 @@ learning even more in the future.
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-yT-qqo">
                                 <rect key="frame" x="192" y="401" width="30" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="4">
+                                <state key="normal" title="2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -176,7 +176,7 @@ learning even more in the future.
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-qq-9x3">
                                 <rect key="frame" x="272" y="401" width="30" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="6">
+                                <state key="normal" title="3">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
