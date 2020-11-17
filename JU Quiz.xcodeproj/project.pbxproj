@@ -22,6 +22,7 @@
 		9E4FC7E3255D1C2A007B7475 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FC7E2255D1C2A007B7475 /* Question.swift */; };
 		9E5C67E62564014A007561E7 /* GameResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C67E42564014A007561E7 /* GameResult+CoreDataClass.swift */; };
 		9E5C67E72564014A007561E7 /* GameResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C67E52564014A007561E7 /* GameResult+CoreDataProperties.swift */; };
+		9E5C67EC256409F2007561E7 /* HighscoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C67EB256409F2007561E7 /* HighscoreTableViewController.swift */; };
 		9E6363B8254AC4B500FEDB43 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9E4FC7E2255D1C2A007B7475 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		9E5C67E42564014A007561E7 /* GameResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		9E5C67E52564014A007561E7 /* GameResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		9E5C67EB256409F2007561E7 /* HighscoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoreTableViewController.swift; sourceTree = "<group>"; };
 		9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				9E34CF452553E69400834DB6 /* ResultView.swift */,
 				9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */,
 				9E4FC7E2255D1C2A007B7475 /* Question.swift */,
+				9E5C67EB256409F2007561E7 /* HighscoreTableViewController.swift */,
 			);
 			path = "JU Quiz";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5C67EC256409F2007561E7 /* HighscoreTableViewController.swift in Sources */,
 				9E2A8528254A010700FA96F8 /* ViewController.swift in Sources */,
 				9E6363B8254AC4B500FEDB43 /* QuestionViewController.swift in Sources */,
 				9E2A8524254A010700FA96F8 /* AppDelegate.swift in Sources */,

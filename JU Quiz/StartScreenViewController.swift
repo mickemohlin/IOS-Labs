@@ -97,6 +97,13 @@ class StartScreenViewController: UIViewController {
     }
     
     
+    
+    @IBAction func highscoreButtonHandler(_ sender: Any) {
+        let highscoreTableViewController = HighscoreTableViewController()
+        navigationController?.pushViewController(highscoreTableViewController, animated: true)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let questionViewController = segue.destination as? QuestionViewController {
             let question1 = Question(category: "Food", type: .multiple, difficulty: .easy, question: "What is my favorite drink?", correctAnswer: "Redbull Vodka", incorrectAnswers: ["Water", "Milk", "Coca Cola"])
@@ -124,6 +131,7 @@ class StartScreenViewController: UIViewController {
             var countQuestions = 0
             
             for eachQuestion in questions {
+                
                 if countQuestions == chosenNumberOfRounds {
                     break
                 }

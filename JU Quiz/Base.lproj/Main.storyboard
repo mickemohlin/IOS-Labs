@@ -190,6 +190,9 @@ learning even more in the future.
                                 <state key="normal" title="Highscore">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="highscoreButtonHandler:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="JQ8-d1-Npm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odx-Un-lDI"/>
