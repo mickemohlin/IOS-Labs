@@ -26,7 +26,6 @@ class QuestionViewController: UIViewController {
     
     var numberOfQuestions = 0
     var numberOfRightAnswers = 0
-    //var gameDifficulty: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
