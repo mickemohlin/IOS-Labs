@@ -17,6 +17,7 @@ class StartScreenViewController: UIViewController {
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var fourButton: UIButton!
     @IBOutlet weak var sixButton: UIButton!
+    @IBOutlet weak var highScoreButton: UIButton!
     
     
     var chosenDifficulty: String = "easy" //Default value
@@ -34,6 +35,7 @@ class StartScreenViewController: UIViewController {
         twoButton.layer.cornerRadius = 5
         fourButton.layer.cornerRadius = 5
         sixButton.layer.cornerRadius = 5
+        highScoreButton.layer.cornerRadius = 5
     }
     
     
@@ -94,9 +96,6 @@ class StartScreenViewController: UIViewController {
         }
     }
     
-    func collectSelectedQuestions(allQuestions: Question) {
-        //TODO
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let questionViewController = segue.destination as? QuestionViewController {

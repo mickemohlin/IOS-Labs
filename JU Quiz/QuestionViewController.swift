@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QuestionViewController: UIViewController {
 
@@ -112,6 +113,7 @@ class QuestionViewController: UIViewController {
         guard !questions.isEmpty,
             let questionViewController = storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController else {
                 performSegue(withIdentifier: "ResultView", sender: nil)
+                saveGameResult()
                 return
             }
         
@@ -119,6 +121,18 @@ class QuestionViewController: UIViewController {
         questionViewController.numberOfRightAnswers = numberOfRightAnswers
         questionViewController.questions = questions
         navigationController?.pushViewController(questionViewController, animated: true)
+    }
+    
+    private func saveGameResult() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        if let gameResult = NSEntityDescription.insertNewObject(forEntityName: "GameResult", into: managedObjectContext) as? GameResult {
+            gameResult.numberOfQuestions = Int32(numberOfQuestions)
+            gameResult.rightAnswers = Int32(numberOfRightAnswers)
+            gameResult.date = Date()
+            appDelegate.saveContext()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

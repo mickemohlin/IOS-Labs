@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3w-Rk-AfS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3w-Rk-AfS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -91,7 +91,7 @@ learning even more in the future.
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqt-pz-ZJn">
-                                <rect key="frame" x="153.5" y="655" width="107" height="36"/>
+                                <rect key="frame" x="153.5" y="555" width="107" height="36"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Start Game">
@@ -102,7 +102,7 @@ learning even more in the future.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-Dx-lbG">
-                                <rect key="frame" x="165" y="706" width="84" height="34"/>
+                                <rect key="frame" x="165" y="606" width="84" height="34"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="About me">
@@ -183,6 +183,14 @@ learning even more in the future.
                                     <action selector="roundSelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="KkA-9f-4N6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-kC-Bpp">
+                                <rect key="frame" x="162" y="705" width="90" height="36"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Highscore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odx-Un-lDI"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -202,11 +210,13 @@ learning even more in the future.
                             <constraint firstItem="H3o-wC-eXb" firstAttribute="centerY" secondItem="odx-Un-lDI" secondAttribute="top" constant="30" id="dZ3-36-rTa"/>
                             <constraint firstItem="9fl-78-ExU" firstAttribute="centerY" secondItem="5Nb-SU-ubX" secondAttribute="centerY" constant="100" id="g6P-g2-Mq0"/>
                             <constraint firstItem="ZQ6-n2-o7e" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="-80" id="h7d-Ne-fSN"/>
-                            <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="225" id="om5-lF-Zd2"/>
+                            <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="125" id="om5-lF-Zd2"/>
                             <constraint firstItem="4Sv-RZ-Eem" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="80" id="ptd-UC-FIr"/>
                             <constraint firstItem="Ptk-S7-hL5" firstAttribute="centerY" secondItem="9fl-78-ExU" secondAttribute="centerY" constant="50" id="qWB-Ub-HPI"/>
                             <constraint firstItem="hJe-qq-9x3" firstAttribute="centerX" secondItem="b6q-yT-qqo" secondAttribute="centerX" constant="80" id="v9T-Hb-7q6"/>
-                            <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="275" id="y9o-9b-q82"/>
+                            <constraint firstItem="Bci-kC-Bpp" firstAttribute="centerY" secondItem="O4n-Dx-lbG" secondAttribute="centerY" constant="100" id="vb6-ou-ogJ"/>
+                            <constraint firstItem="Bci-kC-Bpp" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="wmk-f9-afr"/>
+                            <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerY" secondItem="rqt-pz-ZJn" secondAttribute="centerY" constant="50" id="y9o-9b-q82"/>
                             <constraint firstItem="hJe-qq-9x3" firstAttribute="centerY" secondItem="9fl-78-ExU" secondAttribute="centerY" constant="50" id="zOx-Tb-E5Q"/>
                             <constraint firstItem="9fl-78-ExU" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="zXa-uM-Eq2"/>
                         </constraints>
@@ -217,6 +227,7 @@ learning even more in the future.
                         <outlet property="easyButton" destination="ZQ6-n2-o7e" id="Rgd-0T-1pJ"/>
                         <outlet property="fourButton" destination="b6q-yT-qqo" id="1a2-1o-I9c"/>
                         <outlet property="hardButton" destination="4Sv-RZ-Eem" id="Qth-g1-52F"/>
+                        <outlet property="highScoreButton" destination="Bci-kC-Bpp" id="6jj-ut-IOc"/>
                         <outlet property="mediumButton" destination="5Nb-SU-ubX" id="wpb-HE-fF9"/>
                         <outlet property="sixButton" destination="hJe-qq-9x3" id="G7Q-0B-mrP"/>
                         <outlet property="startGameButton" destination="rqt-pz-ZJn" id="5yD-Nc-1Tf"/>
@@ -360,6 +371,9 @@ learning even more in the future.
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

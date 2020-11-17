@@ -20,6 +20,8 @@
 		9E34CF462553E69400834DB6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34CF452553E69400834DB6 /* ResultView.swift */; };
 		9E34CF4B2553EA9200834DB6 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */; };
 		9E4FC7E3255D1C2A007B7475 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4FC7E2255D1C2A007B7475 /* Question.swift */; };
+		9E5C67E62564014A007561E7 /* GameResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C67E42564014A007561E7 /* GameResult+CoreDataClass.swift */; };
+		9E5C67E72564014A007561E7 /* GameResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C67E52564014A007561E7 /* GameResult+CoreDataProperties.swift */; };
 		9E6363B8254AC4B500FEDB43 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		9E34CF452553E69400834DB6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		9E34CF4A2553EA9200834DB6 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		9E4FC7E2255D1C2A007B7475 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9E5C67E42564014A007561E7 /* GameResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9E5C67E52564014A007561E7 /* GameResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		9E6363B7254AC4B500FEDB43 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,8 @@
 		9E2A8522254A010700FA96F8 /* JU Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				9E5C67E42564014A007561E7 /* GameResult+CoreDataClass.swift */,
+				9E5C67E52564014A007561E7 /* GameResult+CoreDataProperties.swift */,
 				9E2A8523254A010700FA96F8 /* AppDelegate.swift */,
 				9E2A8525254A010700FA96F8 /* SceneDelegate.swift */,
 				9E2A8527254A010700FA96F8 /* ViewController.swift */,
@@ -282,9 +288,11 @@
 				9E4FC7E3255D1C2A007B7475 /* Question.swift in Sources */,
 				9E2A8526254A010700FA96F8 /* SceneDelegate.swift in Sources */,
 				9E2A852E254A010700FA96F8 /* JU_Quiz.xcdatamodeld in Sources */,
+				9E5C67E62564014A007561E7 /* GameResult+CoreDataClass.swift in Sources */,
 				9E34CF462553E69400834DB6 /* ResultView.swift in Sources */,
 				9E34CF412553E59A00834DB6 /* ResultViewController.swift in Sources */,
 				9E34CF4B2553EA9200834DB6 /* StartScreenViewController.swift in Sources */,
+				9E5C67E72564014A007561E7 /* GameResult+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
