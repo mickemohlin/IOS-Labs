@@ -91,8 +91,8 @@ learning even more in the future.
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqt-pz-ZJn">
-                                <rect key="frame" x="153.5" y="530" width="107" height="36"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <rect key="frame" x="153.5" y="655" width="107" height="36"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Start Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,8 +102,8 @@ learning even more in the future.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-Dx-lbG">
-                                <rect key="frame" x="165" y="581" width="84" height="34"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <rect key="frame" x="165" y="706" width="84" height="34"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="About me">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,67 +147,80 @@ learning even more in the future.
                                     <action selector="difficultySelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="n27-II-ciS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNE-nw-zR1">
-                                <rect key="frame" x="120.5" y="328" width="173" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fl-78-ExU">
+                                <rect key="frame" x="106" y="353" width="202" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9y-EF-7yS">
-                                <rect key="frame" x="136.5" y="376" width="41" height="34"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-S7-hL5">
+                                <rect key="frame" x="112" y="401" width="30" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Food">
+                                <state key="normal" title="2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="categorySelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="7sF-7E-rna"/>
+                                    <action selector="roundSelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="v1B-Zd-gKB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WR-ae-LsR">
-                                <rect key="frame" x="226.5" y="376" width="61" height="34"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-yT-qqo">
+                                <rect key="frame" x="192" y="401" width="30" height="34"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Hockey">
+                                <state key="normal" title="4">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="categorySelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="VBz-xn-ryF"/>
+                                    <action selector="roundSelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="R3C-9u-AQ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-qq-9x3">
+                                <rect key="frame" x="272" y="401" width="30" height="34"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="roundSelection:" destination="sN6-mH-3Aq" eventType="touchUpInside" id="KkA-9f-4N6"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odx-Un-lDI"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="e9y-EF-7yS" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" constant="-50" id="2vW-pb-839"/>
                             <constraint firstItem="ZQ6-n2-o7e" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="Avf-va-xhS"/>
                             <constraint firstItem="5Nb-SU-ubX" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="CRo-R8-9Zc"/>
-                            <constraint firstItem="e9y-EF-7yS" firstAttribute="centerY" secondItem="VNE-nw-zR1" secondAttribute="centerY" constant="50" id="Msi-lY-atI"/>
+                            <constraint firstItem="b6q-yT-qqo" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="JZ2-79-l5L"/>
+                            <constraint firstItem="b6q-yT-qqo" firstAttribute="centerY" secondItem="9fl-78-ExU" secondAttribute="centerY" constant="50" id="KMK-IB-ath"/>
+                            <constraint firstItem="Ptk-S7-hL5" firstAttribute="centerX" secondItem="b6q-yT-qqo" secondAttribute="centerX" constant="-80" id="LKT-z3-TXv"/>
                             <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="O1l-XY-GaB"/>
-                            <constraint firstItem="4WR-ae-LsR" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" constant="50" id="OXq-PA-ahj"/>
                             <constraint firstItem="slT-Qz-kOb" firstAttribute="centerY" secondItem="H3o-wC-eXb" secondAttribute="centerY" constant="100" id="RG4-bo-7d9"/>
                             <constraint firstItem="H3o-wC-eXb" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="Rit-lv-Kh4"/>
-                            <constraint firstItem="VNE-nw-zR1" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="S3Q-1e-FH4"/>
                             <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="UQV-l9-jLR"/>
                             <constraint firstItem="5Nb-SU-ubX" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="VIi-4n-W65"/>
-                            <constraint firstItem="VNE-nw-zR1" firstAttribute="centerY" secondItem="5Nb-SU-ubX" secondAttribute="centerY" constant="75" id="WzX-sB-zqm"/>
                             <constraint firstItem="slT-Qz-kOb" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="a8Q-To-GBZ"/>
                             <constraint firstItem="4Sv-RZ-Eem" firstAttribute="centerY" secondItem="slT-Qz-kOb" secondAttribute="centerY" constant="50" id="bcE-As-WYO"/>
                             <constraint firstItem="H3o-wC-eXb" firstAttribute="centerY" secondItem="odx-Un-lDI" secondAttribute="top" constant="30" id="dZ3-36-rTa"/>
+                            <constraint firstItem="9fl-78-ExU" firstAttribute="centerY" secondItem="5Nb-SU-ubX" secondAttribute="centerY" constant="100" id="g6P-g2-Mq0"/>
                             <constraint firstItem="ZQ6-n2-o7e" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="-80" id="h7d-Ne-fSN"/>
-                            <constraint firstItem="4WR-ae-LsR" firstAttribute="centerY" secondItem="VNE-nw-zR1" secondAttribute="centerY" constant="50" id="hSc-9q-6V4"/>
-                            <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="100" id="om5-lF-Zd2"/>
+                            <constraint firstItem="rqt-pz-ZJn" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="225" id="om5-lF-Zd2"/>
                             <constraint firstItem="4Sv-RZ-Eem" firstAttribute="centerX" secondItem="5Nb-SU-ubX" secondAttribute="centerX" constant="80" id="ptd-UC-FIr"/>
-                            <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="150" id="y9o-9b-q82"/>
+                            <constraint firstItem="Ptk-S7-hL5" firstAttribute="centerY" secondItem="9fl-78-ExU" secondAttribute="centerY" constant="50" id="qWB-Ub-HPI"/>
+                            <constraint firstItem="hJe-qq-9x3" firstAttribute="centerX" secondItem="b6q-yT-qqo" secondAttribute="centerX" constant="80" id="v9T-Hb-7q6"/>
+                            <constraint firstItem="O4n-Dx-lbG" firstAttribute="centerY" secondItem="9Mf-tl-UFv" secondAttribute="centerY" constant="275" id="y9o-9b-q82"/>
+                            <constraint firstItem="hJe-qq-9x3" firstAttribute="centerY" secondItem="9fl-78-ExU" secondAttribute="centerY" constant="50" id="zOx-Tb-E5Q"/>
+                            <constraint firstItem="9fl-78-ExU" firstAttribute="centerX" secondItem="9Mf-tl-UFv" secondAttribute="centerX" id="zXa-uM-Eq2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fYH-3H-Exd"/>
                     <connections>
                         <outlet property="aboutButton" destination="O4n-Dx-lbG" id="iib-vf-2go"/>
                         <outlet property="easyButton" destination="ZQ6-n2-o7e" id="Rgd-0T-1pJ"/>
-                        <outlet property="foodButton" destination="e9y-EF-7yS" id="BKn-Gq-h9L"/>
+                        <outlet property="fourButton" destination="b6q-yT-qqo" id="1a2-1o-I9c"/>
                         <outlet property="hardButton" destination="4Sv-RZ-Eem" id="Qth-g1-52F"/>
-                        <outlet property="hockeyButton" destination="4WR-ae-LsR" id="PPK-QU-Ken"/>
                         <outlet property="mediumButton" destination="5Nb-SU-ubX" id="wpb-HE-fF9"/>
+                        <outlet property="sixButton" destination="hJe-qq-9x3" id="G7Q-0B-mrP"/>
                         <outlet property="startGameButton" destination="rqt-pz-ZJn" id="5yD-Nc-1Tf"/>
+                        <outlet property="twoButton" destination="Ptk-S7-hL5" id="KT0-WQ-Iuv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76k-Fb-ahg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -240,7 +253,7 @@ learning even more in the future.
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-xw-2r3">
                                                         <rect key="frame" x="0.0" y="0.0" width="191.5" height="186"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Redbull Vodka">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,7 +264,7 @@ learning even more in the future.
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MR9-mb-qKN">
                                                         <rect key="frame" x="202.5" y="0.0" width="191.5" height="186"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Rom &amp; Cola">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,7 +280,7 @@ learning even more in the future.
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9In-dB-odo">
                                                         <rect key="frame" x="0.0" y="0.0" width="192" height="186"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Mojito">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -278,7 +291,7 @@ learning even more in the future.
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-Ld-gwo">
                                                         <rect key="frame" x="202" y="0.0" width="192" height="186"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Pina Colada">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -344,6 +357,9 @@ learning even more in the future.
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,11 +14,13 @@ class StartScreenViewController: UIViewController {
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var mediumButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
-    @IBOutlet weak var foodButton: UIButton!
-    @IBOutlet weak var hockeyButton: UIButton!
+    @IBOutlet weak var twoButton: UIButton!
+    @IBOutlet weak var fourButton: UIButton!
+    @IBOutlet weak var sixButton: UIButton!
     
-    var chosenDifficulty: String = "nothing"
-    var chosenCategory: String = "nothing"
+    
+    var chosenDifficulty: String = "easy" //Default value
+    var chosenNumberOfRounds: Int = 4 //Default value
     
 
     override func viewDidLoad() {
@@ -29,8 +31,9 @@ class StartScreenViewController: UIViewController {
         easyButton.layer.cornerRadius = 5
         mediumButton.layer.cornerRadius = 5
         hardButton.layer.cornerRadius = 5
-        foodButton.layer.cornerRadius = 5
-        hockeyButton.layer.cornerRadius = 5
+        twoButton.layer.cornerRadius = 5
+        fourButton.layer.cornerRadius = 5
+        sixButton.layer.cornerRadius = 5
     }
     
     
@@ -41,7 +44,7 @@ class StartScreenViewController: UIViewController {
             mediumButton.backgroundColor = .systemYellow
             hardButton.backgroundColor = .systemRed
             
-            chosenDifficulty = "Easy"
+            chosenDifficulty = "easy"
         }
         
         else if sender.tag == 2 {
@@ -49,7 +52,7 @@ class StartScreenViewController: UIViewController {
             mediumButton.backgroundColor = .purple
             hardButton.backgroundColor = .systemRed
             
-            chosenDifficulty = "Medium"
+            chosenDifficulty = "medium"
         }
         
         else if sender.tag == 3 {
@@ -57,34 +60,43 @@ class StartScreenViewController: UIViewController {
             mediumButton.backgroundColor = .systemYellow
             hardButton.backgroundColor = .purple
             
-            chosenDifficulty = "Hard"
+            chosenDifficulty = "hard"
         }
     }
     
     
     
-    @IBAction func categorySelection(_ sender: UIButton) {
-         
+    @IBAction func roundSelection(_ sender: UIButton) {
+        
         if sender.tag == 1 {
-            foodButton.backgroundColor = .purple
-            hockeyButton.backgroundColor = .systemTeal
+            twoButton.backgroundColor = .purple
+            fourButton.backgroundColor = .systemTeal
+            sixButton.backgroundColor = .systemTeal
             
-            chosenCategory = "Food"
+            chosenNumberOfRounds = 2
         }
         
         else if sender.tag == 2 {
-            foodButton.backgroundColor = .systemTeal
-            hockeyButton.backgroundColor = .purple
+            twoButton.backgroundColor = .systemTeal
+            fourButton.backgroundColor = .purple
+            sixButton.backgroundColor = .systemTeal
             
-            chosenCategory = "Food"
+            chosenNumberOfRounds = 4
+        }
+        
+        else if sender.tag == 3 {
+            twoButton.backgroundColor = .systemTeal
+            fourButton.backgroundColor = .systemTeal
+            sixButton.backgroundColor = .purple
+            
+            chosenNumberOfRounds = 6
+
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation */
+    func collectSelectedQuestions(allQuestions: Question) {
+        //TODO
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let questionViewController = segue.destination as? QuestionViewController {
@@ -101,11 +113,9 @@ class StartScreenViewController: UIViewController {
             let question6 = Question(category: "Hockey", type: .multiple, difficulty: .hard, question: "How many points did Nikita Kucherov get in the regular season: 2018-2019?", correctAnswer: "127 points", incorrectAnswers: ["110 points", "95 points", "133 points"])
             
             let questions = [question1, question2, question3, question4, question5, question6]
-            //var selectedQuestions = [Question]()
             
-            //TODO: Add questions according to the player choice.
+            //selectedQuestions = collectSelectedQuestions()
             
-           
             questionViewController.numberOfQuestions = questions.count
             questionViewController.questions = questions
         }
